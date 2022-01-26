@@ -11,7 +11,7 @@ body {
     position: relative;
     height: 35rem;
     background-color: #f0e0ea;
-    background-image: url("../mainApp/images/main-image.jpg");
+    background-image: url("../mainapp/images/main-image.jpg");
     background-size: auto 100%;
     background-position: right;
     background-repeat: no-repeat;

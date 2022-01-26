@@ -5,4 +5,4 @@ def index(request):
     data = {
         'title': 'Name of page'
     }
-    return render(request, 'mainApp/content.html', data)
+    return render(request, 'mainapp/content.html', data)
