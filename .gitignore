@@ -14,4 +14,7 @@
 
 # Cache
 /sharhouse55/__pycache__/
+/sharhouse55/__init__.py
 /mainapp/__pycache__/
+/mainapp/migrations/
+/mainapp/__init__.py
