@@ -10,4 +10,8 @@
 /dataSources.local.xml
 
 # Staticfiles
-/staticfiles
+/staticfiles/
+
+# Cache
+/sharhouse55/__pycache__/
+/mainapp/__pycache__/
