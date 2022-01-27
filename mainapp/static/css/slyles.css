@@ -4,6 +4,7 @@ html {
 }
 
 body {
+    margin-top: 5rem;
     margin-bottom: 4rem;
 }
 
@@ -89,6 +90,12 @@ body {
     width: 2rem;
     height: 2rem;
     margin-right: .5rem;
+}
+
+.prducts{
+    width: 100%;
+    margin: 0;
+    background: #a1959f;
 }
 
 footer {
