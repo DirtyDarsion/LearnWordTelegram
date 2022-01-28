@@ -13,6 +13,7 @@
 /staticfiles/
 
 # Cache
+/__pycache__
 /sharhouse55/__pycache__/
 /sharhouse55/__init__.py
 /mainapp/__pycache__/
