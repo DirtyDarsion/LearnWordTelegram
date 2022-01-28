@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-23jza1x+nv__^_a!d&0gil^u6--nnqf+$zf9=x6=!6iq1j%)-5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', '192.168.0.6', 'sharhouse55.herokuapp.com']
 
 
 # Application definition
@@ -110,6 +110,11 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = 'static/'
+
+# Media files
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/

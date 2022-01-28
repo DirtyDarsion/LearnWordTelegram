@@ -30,51 +30,23 @@
         <div class="container">
             <h1 class="display-4 d-flex justify-content-center m-0 py-4 w-100">Наши работы</h1>
             <div class="p-0 row">
-                <div class="col-12 col-lg-6 col-xl-4 p-4">
-                    <div class="card ">
-                        <img src="{% static 'mainapp/images/products/Fountain_with_1.jpeg' %}"
-                             class="card-img-top" alt="Fountain with number 1">
-                        <div class="card-body">
-                            <div class="card-title fs-3">
-                                Здесь название
+                {% for product in Products %}
+                    <div class="col-12 col-lg-6 col-xl-4 p-4">
+                        <div class="card">
+                            <img src="{{ product.img.url }}"
+                                 class="card-img-top" alt="Fountain with tree">
+                            <div class="card-body">
+                                <div class="card-title fs-3">
+                                    {{ product.name }}
+                                </div>
+                                <div class="card-text fs-5">
+                                    {{ product.text }}
+                                </div>
+                                <a class="btn btn-primary mt-3" href="#">Посмотреть</a>
                             </div>
-                            <div class="card-text fs-5">
-                                Здесь текст текст текст текст текст текст текст текст текст
-                            </div>
-                            <a class="btn btn-primary mt-3" href="#">Посмотреть</a>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-lg-6 col-xl-4 p-4">
-                    <div class="card ">
-                        <img src="{% static 'mainapp/images/products/Fountain_with_2.jpeg' %}"
-                             class="card-img-top" alt="Fountain with number 2">
-                        <div class="card-body">
-                            <div class="card-title fs-3">
-                                Здесь название
-                            </div>
-                            <div class="card-text fs-5">
-                                Здесь текст текст текст текст текст текст текст текст текст
-                            </div>
-                            <a class="btn btn-primary mt-3" href="#">Посмотреть</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 col-xl-4 p-4">
-                    <div class="card ">
-                        <img src="{% static 'mainapp/images/products/Fountain_with_tree.jpeg' %}"
-                             class="card-img-top" alt="Fountain with tree">
-                        <div class="card-body">
-                            <div class="card-title fs-3">
-                                Здесь название
-                            </div>
-                            <div class="card-text fs-5">
-                                Здесь текст текст текст текст текст текст текст текст текст
-                            </div>
-                            <a class="btn btn-primary mt-3" href="#">Посмотреть</a>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
