@@ -31,8 +31,7 @@ EMAIL_USE_SSL = True
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-# ['0.0.0.0', 'localhost', '127.0.0.1', 'sharhouse55.herokuapp.com', '192.168.0.6']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'sharhouse55.herokuapp.com', '192.168.0.6']
 
 
 # Application definition
@@ -145,7 +144,8 @@ MEDIA_URL = '/media/'
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
