@@ -31,7 +31,7 @@ if DEBUG:
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'sharhouse55.heroku.app']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'sharhouse55.herokuapp.com']
 
 
 # Application definition
