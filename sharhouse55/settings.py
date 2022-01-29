@@ -74,10 +74,10 @@ WSGI_APPLICATION = 'sharhouse55.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'django_db',
-        'USER': 'admin',
-        'PASSWORD': 'admin123',
-        'HOST': '127.0.0.1',
+        'NAME': 'd7ctj7g3d1jakk',
+        'USER': 'izgwcjugthojkx',
+        'PASSWORD': 'd9550961d5e08671135f2eb262c47f07a528a72622da167851d2f2604f0dec19',
+        'HOST': 'ec2-54-228-95-1.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
 }
