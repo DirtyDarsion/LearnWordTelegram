@@ -6,7 +6,7 @@ class Products(models.Model):
     text = models.TextField('Описание')
     img = models.ImageField('Изображение', upload_to='mainapp/media/', default='')
     price = models.IntegerField('Цена', default=True)
-    show_in_index = models.BooleanField('Отображать на главной странице', default=False)
+    show_in_index = models.BooleanField('На главной', default=False)
 
     def __str__(self):
         return self.name
