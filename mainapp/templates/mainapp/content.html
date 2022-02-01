@@ -28,7 +28,7 @@
 
     <section class="products">
         <div class="container">
-            <h1 class="display-4 d-flex justify-content-center m-0 py-4 w-100">Наши работы</h1>
+            <h1 class="d-flex justify-content-center display-4 m-0 py-4">Наши работы</h1>
             <div class="p-0 row">
                 {% for product in products %}
                     <div class="col-12 col-lg-6 col-xl-4 p-4">
@@ -42,12 +42,13 @@
                                 <div class="card-text fs-5">
                                     {{ product.text }}
                                 </div>
-                                <a class="btn btn-primary mt-3" href="#">{{ product.price }} руб.</a>
+                                <a class="btn btn-info mt-3 fs-3" href="#">{{ product.price }} руб.</a>
                             </div>
                         </div>
                     </div>
                 {% endfor %}
             </div>
+            <a class="btn btn-outline-primary fs-3" href="{% url 'products' %}">Показать еще</a>
         </div>
     </section>
 
