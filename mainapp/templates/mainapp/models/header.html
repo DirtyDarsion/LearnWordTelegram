@@ -2,13 +2,6 @@
     <div class="container">
         <a class="navbar-brand me-4" href="{% url 'index' %}">
             Shar House 55
-            <!--
-            <div class="d-none d-xxl-inline">xxl</div>
-            <div class="d-none d-xl-inline">xl</div>
-            <div class="d-none d-lg-inline">lg</div>
-            <div class="d-none d-md-inline">md</div>
-            <div class="d-none d-sm-inline">sm</div>
-            -->
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -21,13 +14,10 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a class="nav-link me-3" href="#">Заказать</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-3" href="#">Отзывы</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link me-3" href="#contacts">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-3" href="{% url 'products' %}">Наши работы</a>
                     </li>
                 </ul>
             </div>
