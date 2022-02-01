@@ -12,5 +12,5 @@ class Products(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Продукт'
-        verbose_name_plural = 'Продукты'
+        verbose_name = 'Работа'
+        verbose_name_plural = 'Работы'
