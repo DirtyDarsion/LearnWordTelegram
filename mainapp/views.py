@@ -7,3 +7,7 @@ def index(request):
         'Products': Products.objects.filter(show_in_index=True),
     }
     return render(request, 'mainapp/content.html', data)
+
+
+def test(request):
+    return render(request, 'mainapp/test.html')
