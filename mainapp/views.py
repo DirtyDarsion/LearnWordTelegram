@@ -22,7 +22,3 @@ def qr_code(request):
 
 def qr_code1(request):
     return render(request, 'mainapp/qr-code1.html')
-
-
-def test(request):
-    return render(request, 'mainapp/test.html')
