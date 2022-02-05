@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" style="height: 5rem">
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top fs-5" style="height: 5rem">
     <div class="container">
-        <a class="navbar-brand me-4" href="{% url 'index' %}">
+        <a class="navbar-brand me-4 fs-4" href="{% url 'index' %}">
             Shar House 55
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -18,6 +18,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link me-3" href="{% url 'products' %}">Наши работы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-3" href="{% url 'care' %}">Рекомендации</a>
                     </li>
                 </ul>
             </div>

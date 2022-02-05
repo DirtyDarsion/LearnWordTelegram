@@ -32,6 +32,7 @@ footer {
     background: rgba(255, 255, 255, 0.5);
     color: #80317a;
     padding: 1.5rem;
+    border-radius: .5rem;
 }
 
 .section-main .text-label-lg{
@@ -82,14 +83,21 @@ footer {
 /* Section with products */
 
 .products{
-    width: 100%;
-    margin: 0;
     padding: 4rem 0;
     background: #e1c6db;
 }
 
 .products .card{
     background: #d2b2ce;
+}
+
+.products .card-text{
+    text-align: justify;
+}
+
+.products .card-footer{
+    background: #c288bb;
+    border-radius: 1rem;
 }
 
 .products .btn{
@@ -130,4 +138,27 @@ footer {
     width: 2rem;
     height: 2rem;
     margin-right: .5rem;
+}
+
+/* Care */
+
+.care{
+    padding: 4rem 0;
+    background: #e1c6db;
+}
+
+.care h1{
+    font-size: 48px;
+    font-weight: 300;
+}
+
+.care h2{
+    font-size: 36px;
+    font-weight: 360;
+}
+
+.care p{
+    font-size: 24px;
+    font-weight: 300;
+    text-align: justify;
 }

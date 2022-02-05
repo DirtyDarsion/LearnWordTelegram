@@ -5,64 +5,56 @@
 
 {% block content %}
     <section class="section-main d-flex align-items-center justify-content-center">
-        {% with main_title='Shar House 55' main_text='Здесь заголовок какой-то'%}
-        <div class="d-none d-lg-block d-md-block d-xl-block text-label-lg">
-            <h1 class="display-4 mb-4">{{ main_title }}</h1>
-            <h1 class="display-6">{{ main_text }}</h1>
-        </div>
-        <div class="d-md-none d-sm-block text-label">
-            <h1 class="display-5 mb-4">{{ main_title }}</h1>
-            <h1 class="display-6">{{ main_text }}</h1>
-        </div>
-
-        <!--<div class="d-none d-xl-block text-label-lg">
+        {% with main_title='Shar House' main_text='Рекомендации по уходу за воздушными шарами'%}
+        <div class="d-none d-xl-block text-label-lg">
             <h1 class="display-4 mb-4">{{ main_title }}</h1>
             <h1 class="display-6">{{ main_text }}</h1>
         </div>
         <div class="d-none d-xl-none d-lg-block d-md-block text-label-sm">
             <h1 class="display-5 mb-4">{{ main_title }}</h1>
             <h1 class="display-6">{{ main_text }}</h1>
-        </div>-->
+        </div>
+        <div class="d-md-none d-sm-block text-label">
+            <h1 class="display-5 mb-4">{{ main_title }}</h1>
+            <h1 class="display-6">{{ main_text }}</h1>
+        </div>
         {% endwith %}
     </section>
 
-    <section class="edge d-flex justify-content-end p-md-5 p-0">
-        <div class="block px-md-5 px-2 py-5">
-            <h1 class="display-4 mb-4">Почему мы?</h1>
-                    {% for edge in edges %}
-                        <div class="col-12 d-flex align-items-center mb-3">
-                            <img class="icon-image" src="{% static 'mainapp/images/icons/ok-icon.png' %}" alt="Yes">
-                            <div class="d-inline fs-4">{{ edge }}</div>
-                        </div>
-                    {% endfor %}
-        </div>
-    </section>
-
-    <section class="products">
+    <section class="care">
         <div class="container">
-            <h1 class="d-flex justify-content-center display-4 m-0 py-4">Наши работы</h1>
-            <div class="p-0 row">
-                {% for product in products %}
-                    <div class="col-12 col-lg-6 col-xl-4 p-4">
-                        <div class="card">
-                            <img src="{{ product.img.url }}"
-                                 class="card-img-top" alt="Fountain with tree">
-                            <div class="card-body">
-                                <div class="card-title fs-3">
-                                    {{ product.name }}
-                                </div>
-                                <div class="card-text fs-5 mb-4">
-                                    {{ product.text }}
-                                </div>
-                                <div class="card-footer fs-2 float-end">
-                                    {{ product.price }} руб.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-            <a class="btn btn-outline-primary fs-3" href="{% url 'products' %}">Показать еще</a>
+            <h1>Рекомендации</h1>
+            <p>
+                Для того, чтобы гелиевые шары могли радовать достаточно долго рекомедуем вам соблюдать следюущие правила:
+            </p>
+            <h2>Хранение</h2>
+            <p>
+                Не оставлять воздушные шары возле батарей или сквозняка, а также на морозе
+            </p>
+            <h2>Высокая влажность</h2>
+            <p>
+                Срок полета гелиевых шариков резко уменьшается при нахождении воздушных шаров в помещении с высокой влажностью.
+            </p>
+            <h2>Пакет для транспортировки</h2>
+            <p>
+                Рекомендуется снять транспортировочный пакет, если Вам доставили воздушные шарики в нем.
+                Хранить не более 2 часов в таких пакетах
+            </p>
+            <h2>Сильные удары</h2>
+            <p>
+                Избегать сильных ударов и резких воздействий, так как воздушные шары обрабатываются специальной пропиткой и
+                такие воздействия могут нарушить целостность пленки внутри гелиевого шара.
+            </p>
+            <h2>Температура</h2>
+            <p>
+                Избегать воздействия высоких температур (+30 градусов и более), при такой жаре шарики могут помутнеть,
+                а также срок полета шара уменьшается
+            </p>
+            <h2>Солнечный свет</h2>
+            <p>
+                Не стоит подвергать гелиевые щары солнечному свету - от этого воздушные шары могут
+                потерять свой блеск, изменить структуры.
+            </p>
         </div>
     </section>
 
