@@ -65,13 +65,11 @@ footer {
 .edge{
     position: relative;
     background-color: #bdd5b0;
-    padding-top: 7.5rem;
-    padding-bottom: 5rem;
 }
 
 .edge .block{
     width: 100%;
-    max-width: 80rem;
+    max-width: 60rem;
     background-color: #aab9d0;
 }
 
