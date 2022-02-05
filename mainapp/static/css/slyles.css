@@ -32,7 +32,6 @@ footer {
     background: rgba(255, 255, 255, 0.5);
     color: #80317a;
     padding: 1.5rem;
-    border-radius: 2rem;
 }
 
 .section-main .text-label-lg{
@@ -61,17 +60,38 @@ footer {
     font-size: 1rem;
 }
 
-/* Section with elements */
+/* Edge */
+
+.edge{
+    position: relative;
+    background-color: #bdd5b0;
+    padding: 5rem;
+}
+
+.edge .block{
+    width: 100%;
+    max-width: 80rem;
+    background-color: #aab9d0;
+    padding: 3rem;
+}
+
+.edge .icon-image{
+    width: 2rem;
+    height: 2rem;
+    margin-right: .5rem;
+}
+
+/* Section with products */
 
 .products{
     width: 100%;
     margin: 0;
     padding: 4rem 0;
-    background: #a1959f;
+    background: #e1c6db;
 }
 
 .products .card{
-    background: #867c85;
+    background: #d2b2ce;
 }
 
 .products .btn{
@@ -82,7 +102,7 @@ footer {
 /* Contacts section */
 
 .contacts{
-    background: #c8e0ea;
+    background: #b4d7e5;
     padding: 4rem 0;
 }
 
@@ -97,24 +117,15 @@ footer {
     padding: 1rem;
     margin: .25rem;
     font-weight: 300;
-    color: #0f1991;
-    border: 2px solid #9fa1da;
+    color: #0d6efd;
+    border: 1px solid #0d6efd;
     border-radius: .5rem;
 }
 
-.contacts .background{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-}
-
-.contacts .background:hover{
-    background: #6897e3;
-    opacity: 20%;
-    transition: 500ms;
+.contacts .block:hover{
+    background: #0d6efd;
+    color: white;
+    transition: 250ms;
 }
 
 .contacts .icon-image{

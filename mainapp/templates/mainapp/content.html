@@ -26,6 +26,22 @@
         </div>
     </section>
 
+    <section class="edge d-flex justify-content-end">
+        <div class="block">
+            <h1 class="display-4 mb-4">Почему мы?</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    {% for i in '1234' %}
+                        <div class="col-12 col-lg-6 d-flex align-items-center mb-3">
+                            <img class="icon-image" src="{% static 'mainapp/images/icons/ok-icon.png' %}" alt="Yes">
+                            <div class="d-inline fs-4">Поэтому</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="products">
         <div class="container">
             <h1 class="d-flex justify-content-center display-4 m-0 py-4">Наши работы</h1>
@@ -42,7 +58,7 @@
                                 <div class="card-text fs-5">
                                     {{ product.text }}
                                 </div>
-                                <a class="btn btn-info mt-3 fs-3" href="#">{{ product.price }} руб.</a>
+                                <a class="btn btn-outline-primary mt-3 fs-3" href="#">{{ product.price }} руб.</a>
                             </div>
                         </div>
                     </div>
@@ -55,14 +71,13 @@
     <section class="contacts w-100 d-flex justify-content-center" id="contacts">
         <div class="mx-4">
             <h1 class="display-4 mb-4">Свяжись с нами:</h1>
-            <div class="p-0 row">
+            <div class="row">
                 <div class="col-12 col-sm-6 d-flex align-items-center">
                     <a href="tel:+79659838316"
                        class="block d-flex align-items-center">
                         <img class="icon-image d-inline "
                              src="{% static 'mainapp/images/icons/call-icon.png' %}" alt="Call">
                         <div class="d-inline fs-4">8-965-983-83-16</div>
-                        <div class="background"></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 d-flex align-items-center">
@@ -72,7 +87,6 @@
                         <img class="icon-image d-inline"
                              src="{% static 'mainapp/images/icons/instagram-icon.png' %}" alt="Instagram">
                         <div class="d-inline fs-4">Instagram</div>
-                        <div class="background"></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 d-flex align-items-center">
@@ -81,7 +95,6 @@
                         <img class="icon-image d-inline"
                              src="{% static 'mainapp/images/icons/whatsapp-icon.png' %}" alt="WhatsApp">
                         <div class="d-inline fs-4">WhatsApp</div>
-                        <div class="background"></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 d-flex align-items-center">
@@ -90,7 +103,6 @@
                         <img class="icon-image d-inline "
                              src="{% static 'mainapp/images/icons/telegram-icon.png' %}" alt="Telegram">
                         <div class="d-inline fs-4">Telegram</div>
-                        <div class="background"></div>
                     </a>
                 </div>
             </div>

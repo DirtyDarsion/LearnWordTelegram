@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = int(os.getenv('DEBUG'))
+DEBUG = int(os.getenv('DEBUG', 1))
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'sharhouse55.herokuapp.com', '192.168.0.6']
 
@@ -129,7 +129,7 @@ AWS_S3_OBJECT_PARAMETERS = {
 }
 AWS_LOCATION = 'static'
 
-S3_STATIC = int(os.getenv('S3_STATIC'))
+S3_STATIC = True
 if S3_STATIC:
     STATIC_LOCATION = 'static'
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
