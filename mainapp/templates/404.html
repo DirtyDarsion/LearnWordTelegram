@@ -1,0 +1,15 @@
+{% extends 'mainapp/main.html' %}
+{% load static %}
+
+{% block title %}Shar House 55{% endblock %}
+
+{% block content %}
+    <section class="d-flex justify-content-center align-items-center p-3" style="height: 45rem">
+        <div>
+            <h1 style="font-size: 78px;">Ошибка 404</h1><br>
+            <h2 class="display-4 mb-3">Данной страницы не существует</h2>
+            <a class="display-1 text-decoration-underline text-black"
+               style="font-size: 36px" href="{% url 'index' %}">Вернуться на главную</a>
+        </div>
+    </section>
+{% endblock %}
