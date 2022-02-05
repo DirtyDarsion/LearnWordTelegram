@@ -16,5 +16,9 @@ class ProductsListView(generic.ListView):
     template_name = 'mainapp/products.html'
 
 
+def qr_code(request):
+    return render(request, 'mainapp/qr-code.html')
+
+
 def test(request):
     return render(request, 'mainapp/test.html')
