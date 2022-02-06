@@ -66,44 +66,5 @@
         </div>
     </section>
 
-    <section class="contacts w-100 d-flex justify-content-center" id="contacts">
-        <div class="mx-4">
-            <h1 class="display-4 mb-4">Свяжись с нами:</h1>
-            <div class="row">
-                <div class="col-12 col-sm-6 d-flex align-items-center">
-                    <a href="tel:+79659838316"
-                       class="block d-flex align-items-center">
-                        <img class="icon-image d-inline "
-                             src="{% static 'mainapp/images/icons/call-icon.png' %}" alt="Call">
-                        <div class="d-inline fs-4">8-965-983-83-16</div>
-                    </a>
-                </div>
-                <div class="col-12 col-sm-6 d-flex align-items-center">
-                    <a href="https://www.instagram.com/shar_house55/"
-                       class="block d-flex align-items-center"
-                       target="_blank">
-                        <img class="icon-image d-inline"
-                             src="{% static 'mainapp/images/icons/instagram-icon.png' %}" alt="Instagram">
-                        <div class="d-inline fs-4">Instagram</div>
-                    </a>
-                </div>
-                <div class="col-12 col-sm-6 d-flex align-items-center">
-                    <a href="https://wa.me/79659838316"
-                       class="block d-flex align-items-center">
-                        <img class="icon-image d-inline"
-                             src="{% static 'mainapp/images/icons/whatsapp-icon.png' %}" alt="WhatsApp">
-                        <div class="d-inline fs-4">WhatsApp</div>
-                    </a>
-                </div>
-                <div class="col-12 col-sm-6 d-flex align-items-center">
-                    <a href="https://t.me/sharhouse55"
-                       class="block d-flex align-items-center">
-                        <img class="icon-image d-inline "
-                             src="{% static 'mainapp/images/icons/telegram-icon.png' %}" alt="Telegram">
-                        <div class="d-inline fs-4">Telegram</div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% include "mainapp/models/contacts.html" %}
 {% endblock %}
