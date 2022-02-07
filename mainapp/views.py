@@ -6,7 +6,7 @@ from .models import Products, Category, Edges, Cares
 class IndexListView(generic.ListView):
     model = Category
     context_object_name = 'categories'
-    queryset = Category.objects.all()
+    queryset = Category.objects.filter(show=True).order_by('priority')
     template_name = 'mainapp/content.html'
 
     def get_context_data(self, **kwargs):
@@ -24,7 +24,7 @@ class ProductsListView(generic.ListView):
         context = super(ProductsListView, self).get_context_data(**kwargs)
         context['categories'] = Category.objects.all()
         if 'pk' in self.kwargs:
-            context['title'] = Category.objects.filter(id=self.kwargs['pk'])[0].name
+            context['title'] = Category.objects.get(id=self.kwargs['pk']).name
         else:
             context['title'] = 'Все работы'
         return context

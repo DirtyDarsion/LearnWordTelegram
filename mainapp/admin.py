@@ -10,7 +10,15 @@ class ProductsAdmin(admin.ModelAdmin):
     search_fields = ['name']
 
 
+class CategoryAdmin(admin.ModelAdmin):
+    fields = ['name', 'show', 'priority', 'img']
+
+    list_display = ['name', 'priority', 'show']
+    ordering = ['-show', 'priority']
+    search_fields = ['name']
+
+
 admin.site.register(Products, ProductsAdmin)
-admin.site.register(Category)
+admin.site.register(Category, CategoryAdmin)
 admin.site.register(Edges)
 admin.site.register(Cares)

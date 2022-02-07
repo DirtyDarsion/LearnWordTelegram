@@ -6,21 +6,25 @@
 {% block content %}
     <section class="products">
         <div class="container-fluid">
-            <div class="d-flex justify-content-center align-items-center">
-                <a class="display-4 text-primary fs-4 text-decoration-none" href="{% url "index" %}">На главную</a>
-                <h1 class="mx-5 pt-1 display-6">
-                    {{ title }}
-                </h1>
-                <div class="dropdown" style="width: 12rem">
-                    <button class="btn btn-primary dropdown-toggle fs-4" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        Категория
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="{% url 'products' %}">Все работы</a></li>
-                        {% for category in categories %}
-                        <li><a class="dropdown-item" href="{% url 'category_products' category.id %}">{{ category.name }}</a></li>
-                        {% endfor %}
-                    </ul>
+            <div class="row">
+                <div class="col-12 col-sm-4 d-flex justify-content-center align-items-center mb-3">
+                    <a class="display-4 text-primary fs-4 text-decoration-none" href="{% url "index" %}">На главную</a>
+                </div>
+                <div class="col-12 col-sm-4 d-flex justify-content-center align-items-center mb-3">
+                    <h1 class="display-6">{{ title }}</h1>
+                </div>
+                <div class="col-12 col-sm-4 d-flex justify-content-center align-items-center mb-3">
+                    <div class="dropdown" style="width: 12rem">
+                        <button class="btn btn-primary dropdown-toggle fs-4" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Категории
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="{% url 'products' %}">Все работы</a></li>
+                            {% for category in categories %}
+                            <li><a class="dropdown-item" href="{% url 'category_products' category.id %}">{{ category.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="p-0 row">

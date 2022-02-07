@@ -4,6 +4,8 @@ from django.db import models
 class Category(models.Model):
     name = models.CharField('Название', max_length=30)
     img = models.ImageField('Изображение', upload_to='mainapp/media/categories', default='')
+    show = models.BooleanField('На главной', default=True)
+    priority = models.IntegerField('Приоритет', default=0)
 
     def __str__(self):
         return self.name
