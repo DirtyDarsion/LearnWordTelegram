@@ -29,12 +29,12 @@
     <section class="edge d-flex justify-content-end p-md-5 p-0">
         <div class="block px-md-5 px-2 py-5">
             <h1 class="display-4 mb-4">Почему мы?</h1>
-                    {% for edge in edges %}
-                        <div class="col-12 d-flex align-items-center mb-3">
-                            <img class="icon-image" src="{% static 'mainapp/images/icons/ok-icon.png' %}" alt="Yes">
-                            <div class="d-inline fs-4">{{ edge }}</div>
-                        </div>
-                    {% endfor %}
+            {% for edge in edges %}
+                <div class="col-12 d-flex align-items-center mb-3">
+                    <img class="icon-image" src="{% static 'mainapp/images/icons/ok-icon.png' %}" alt="Yes">
+                    <div class="d-inline fs-4">{{ edge }}</div>
+                </div>
+            {% endfor %}
         </div>
     </section>
 

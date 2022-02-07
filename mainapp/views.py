@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import Products
+from .models import Products, Category
 
 
 class IndexListView(generic.ListView):
@@ -24,6 +24,17 @@ class ProductsListView(generic.ListView):
     model = Products
     context_object_name = 'products'
     template_name = 'mainapp/products.html'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(ProductsListView, self).get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()
+        return context
+
+    def get_queryset(self):
+        if 'pk' in self.kwargs:
+            return Products.objects.filter(category=self.kwargs['pk'])
+        else:
+            return Products.objects.all()
 
 
 def care(request):

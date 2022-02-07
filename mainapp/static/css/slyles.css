@@ -164,3 +164,9 @@ footer {
     text-align: justify;
     text-indent: 3rem;
 }
+
+/* Page Prosucts */
+
+.products .dropdown{
+    width: 10rem;
+}
