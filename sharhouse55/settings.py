@@ -19,7 +19,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = int(os.getenv('DEBUG', 1))
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'sharhouse55.herokuapp.com', '192.168.0.6']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'sharhouse55.herokuapp.com', '192.168.0.6', '192.168.0.10']
 
 
 # Application definition
