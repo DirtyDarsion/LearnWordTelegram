@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import Products, Category
+from .models import Products, Category, Edges, Cares
 
 
 class IndexListView(generic.ListView):
@@ -11,12 +11,7 @@ class IndexListView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super(IndexListView, self).get_context_data(**kwargs)
-        edges = ['Бесплатная доставка при заказе от 1000 рублей',
-                 'Профессиональная обработка шаров',
-                 'Индивидуальные надписи',
-                 'Выполняем срочные заказы',
-                 'Доставка 24/7']
-        context['edges'] = edges
+        context['edges'] = Edges.objects.all()
         return context
 
 
@@ -28,6 +23,10 @@ class ProductsListView(generic.ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(ProductsListView, self).get_context_data(**kwargs)
         context['categories'] = Category.objects.all()
+        if 'pk' in self.kwargs:
+            context['title'] = Category.objects.filter(id=self.kwargs['pk'])[0].name
+        else:
+            context['title'] = 'Все работы'
         return context
 
     def get_queryset(self):
@@ -37,8 +36,10 @@ class ProductsListView(generic.ListView):
             return Products.objects.all()
 
 
-def care(request):
-    return render(request, 'mainapp/care.html')
+class CaresListView(generic.ListView):
+    model = Cares
+    context_object_name = 'cares'
+    template_name = 'mainapp/care.html'
 
 
 def qr_code(request):

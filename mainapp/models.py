@@ -13,10 +13,8 @@ class Category(models.Model):
 
 
 class Products(models.Model):
-    name = models.CharField('Название', max_length=30)
-    text = models.TextField('Описание', blank=True)
+    name = models.CharField('Название', max_length=60)
     img = models.ImageField('Изображение', upload_to='mainapp/media/', default='')
-    price = models.IntegerField('Цена', blank=True, default=0)
     show_in_index = models.BooleanField('На главной', default=False)
     category = models.ForeignKey(Category, on_delete=models.PROTECT, verbose_name='Категория', null=True)
 
@@ -26,3 +24,26 @@ class Products(models.Model):
     class Meta:
         verbose_name = 'Работа'
         verbose_name_plural = 'Работы'
+
+
+class Edges(models.Model):
+    text = models.TextField('Текст')
+
+    def __str__(self):
+        return self.text
+
+    class Meta:
+        verbose_name = 'Плюс'
+        verbose_name_plural = 'Плюсы'
+
+
+class Cares(models.Model):
+    name = models.CharField('Название', max_length=30)
+    text = models.TextField('Текст')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Уход'
+        verbose_name_plural = 'Уходы'

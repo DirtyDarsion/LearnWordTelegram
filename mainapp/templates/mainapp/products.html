@@ -6,13 +6,17 @@
 {% block content %}
     <section class="products">
         <div class="container-fluid">
-            <div class="d-flex flex-column align-items-center">
-                <h1 class="ms-5 display-6"><a class="text-black" href="{% url "index" %}">На главную</a> | Наши работы{{ locals }}</h1>
-                <div class="dropdown">
-                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="d-flex justify-content-center align-items-center">
+                <a class="display-4 text-primary fs-4 text-decoration-none" href="{% url "index" %}">На главную</a>
+                <h1 class="mx-5 pt-1 display-6">
+                    {{ title }}
+                </h1>
+                <div class="dropdown" style="width: 12rem">
+                    <button class="btn btn-primary dropdown-toggle fs-4" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         Категория
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="{% url 'products' %}">Все работы</a></li>
                         {% for category in categories %}
                         <li><a class="dropdown-item" href="{% url 'category_products' category.id %}">{{ category.name }}</a></li>
                         {% endfor %}
@@ -30,16 +34,14 @@
                                 <div class="card-title fs-3">
                                     {{ product.name }}
                                 </div>
-                                <div class="card-text fs-5">
-                                    {{ product.text }}
-                                </div>
-                                <a class="btn btn-outline-primary mt-3" href="#">{{ product.price }} руб.</a>
                             </div>
                         </div>
                     </div>
                 {% endfor %}
                 {% else %}
-                    Ничего нет
+                    <div class="d-flex justify-content-center display-6 fs-4 pt-4">
+                        В данной категории ничего нет
+                    </div>
                 {% endif %}
             </div>
         </div>
