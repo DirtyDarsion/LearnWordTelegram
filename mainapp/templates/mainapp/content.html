@@ -33,21 +33,20 @@
         <div class="container">
             <h1 class="d-flex justify-content-center display-4 m-0 py-4">Наши работы</h1>
             <div class="p-0 row">
-                {% for product in products %}
+                {% for category in categories %}
                     <div class="col-12 col-lg-6 col-xl-4 p-4">
                         <div class="card">
-                            <img src="{{ product.img.url }}"
+                            <img src="{% static 'mainapp/favicon.ico' %}"
                                  class="card-img-top" alt="Fountain with tree">
                             <div class="card-body">
-                                <div class="card-title fs-3">
-                                    {{ product.name }}
-                                </div>
+                                <a class="btn btn-outline-primary fs-4" href="{% url 'category_products' category.id %}">
+                                    {{ category.name }}
+                                </a>
                             </div>
                         </div>
                     </div>
                 {% endfor %}
             </div>
-            <a class="btn btn-outline-primary fs-3" href="{% url 'products' %}">Показать еще</a>
         </div>
     </section>
 

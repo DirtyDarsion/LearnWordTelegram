@@ -4,9 +4,9 @@ from .models import Products, Category, Edges, Cares
 
 
 class IndexListView(generic.ListView):
-    model = Products
-    context_object_name = 'products'
-    queryset = Products.objects.all()
+    model = Category
+    context_object_name = 'categories'
+    queryset = Category.objects.all()
     template_name = 'mainapp/content.html'
 
     def get_context_data(self, **kwargs):
