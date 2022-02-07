@@ -66,6 +66,10 @@ footer {
 .edge{
     position: relative;
     background-color: #bdd5b0;
+    background-image: url("../mainapp/images/logo-image.png");
+    background-size: auto 90%;
+    background-position: 10%;
+    background-repeat: no-repeat;
 }
 
 .edge .block{

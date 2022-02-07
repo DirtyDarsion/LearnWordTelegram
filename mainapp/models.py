@@ -3,6 +3,7 @@ from django.db import models
 
 class Category(models.Model):
     name = models.CharField('Название', max_length=30)
+    img = models.ImageField('Изображение', upload_to='mainapp/media/categories', default='')
 
     def __str__(self):
         return self.name
@@ -14,8 +15,7 @@ class Category(models.Model):
 
 class Products(models.Model):
     name = models.CharField('Название', max_length=60)
-    img = models.ImageField('Изображение', upload_to='mainapp/media/', default='')
-    show_in_index = models.BooleanField('На главной', default=False)
+    img = models.ImageField('Изображение', upload_to='mainapp/media', default='')
     category = models.ForeignKey(Category, on_delete=models.PROTECT, verbose_name='Категория', null=True)
 
     def __str__(self):

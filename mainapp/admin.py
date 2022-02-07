@@ -3,9 +3,9 @@ from .models import Products, Category, Edges, Cares
 
 
 class ProductsAdmin(admin.ModelAdmin):
-    fields = ['name', 'show_in_index', 'category', 'img']
+    fields = ['name', 'category', 'img']
 
-    list_display = ('name', 'category', 'show_in_index')
+    list_display = ('name', 'category')
     list_filter = ['category']
     search_fields = ['name']
 
