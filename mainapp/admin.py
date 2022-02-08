@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Products, Category, Edges, Cares
+from .models import Products, Category, Price, Edges, Cares
 
 
 class ProductsAdmin(admin.ModelAdmin):
@@ -18,7 +18,14 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ['name']
 
 
+class PriceAdmin(admin.ModelAdmin):
+    fields = ['name', 'price']
+
+    list_display = ['name', 'price']
+
+
 admin.site.register(Products, ProductsAdmin)
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(Price, PriceAdmin)
 admin.site.register(Edges)
 admin.site.register(Cares)

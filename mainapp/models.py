@@ -28,6 +28,18 @@ class Products(models.Model):
         verbose_name_plural = 'Работы'
 
 
+class Price(models.Model):
+    name = models.CharField(max_length=30)
+    price = models.IntegerField('Цена', default=0)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Цена'
+        verbose_name_plural = 'Цены'
+
+
 class Edges(models.Model):
     text = models.TextField('Текст')
 

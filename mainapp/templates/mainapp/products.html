@@ -4,7 +4,7 @@
 {% block title %}Наши работы{% endblock %}
 
 {% block content %}
-    <section class="products">
+    <section class="products pb-1">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-sm-4 d-flex justify-content-center align-items-center mb-3">
@@ -34,8 +34,8 @@
                         <div class="card">
                             <img src="{{ product.img.url }}"
                                  class="card-img-top" alt="Fountain with tree">
-                            <div class="card-body">
-                                <div class="card-title fs-3">
+                            <div class="card-body prod d-flex align-items-center justify-content-center">
+                                <div class="card-title fs-3 fw-light">
                                     {{ product.name }}
                                 </div>
                             </div>
@@ -48,6 +48,8 @@
                     </div>
                 {% endif %}
             </div>
+
+            {% include "mainapp/models/pagination.html" %}
         </div>
     </section>
 

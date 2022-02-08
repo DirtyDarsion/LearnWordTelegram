@@ -17,6 +17,7 @@ class IndexListView(generic.ListView):
 
 class ProductsListView(generic.ListView):
     model = Products
+    paginate_by = 16
     context_object_name = 'products'
     template_name = 'mainapp/products.html'
 
@@ -27,6 +28,8 @@ class ProductsListView(generic.ListView):
             context['title'] = Category.objects.get(id=self.kwargs['pk']).name
         else:
             context['title'] = 'Все работы'
+
+        print(locals())
         return context
 
     def get_queryset(self):
@@ -40,6 +43,10 @@ class CaresListView(generic.ListView):
     model = Cares
     context_object_name = 'cares'
     template_name = 'mainapp/care.html'
+
+
+def price(request):
+    return render(request, 'mainapp/price.html')
 
 
 def qr_code(request):

@@ -33,6 +33,7 @@ footer {
     color: #80317a;
     padding: 1.5rem;
     border-radius: .5rem;
+    text-align: center;
 }
 
 .section-main .text-label-lg{
@@ -65,7 +66,7 @@ footer {
 
 .edge{
     position: relative;
-    background-color: #bdd5b0;
+    background-color: #d3d5ea;
     background-image: url("../mainapp/images/logo-image.png");
     background-size: auto 90%;
     background-position: 10%;
@@ -93,15 +94,11 @@ footer {
 
 .products .card{
     background: #d2b2ce;
+    text-align: center;
 }
 
-.products .card-text{
-    text-align: justify;
-}
-
-.products .card-footer{
-    background: #c288bb;
-    border-radius: 1rem;
+.products .prod{
+    height: 8rem;
 }
 
 .products .btn{
@@ -148,18 +145,20 @@ footer {
 
 .care{
     padding: 4rem 0;
-    background: #e1c6db;
+    background: #f1e6ed;
 }
 
 .care h1{
     font-size: 48px;
     font-weight: 300;
+    text-indent: 3rem;
 }
 
 .care h2{
-    padding: .5rem;
+    padding: .5rem 0 .5rem 0;
     font-size: 36px;
     font-weight: 360;
+    text-indent: 3rem;
 }
 
 .care p{
@@ -167,4 +166,11 @@ footer {
     font-weight: 300;
     text-align: justify;
     text-indent: 3rem;
+}
+
+/* Pagination */
+
+.page-link{
+    font-size: 24px;
+    padding: .5rem 1rem;
 }
