@@ -28,7 +28,7 @@ footer {
     background-repeat: no-repeat;
 }
 
-.section-main .text-label-lg, .text-label-sm, .text-label{
+.section-main .text-label-lg, .text-label-sm{
     background: rgba(255, 255, 255, 0.5);
     color: #80317a;
     padding: 1.5rem;
@@ -37,12 +37,13 @@ footer {
 }
 
 .section-main .text-label-lg{
-    margin-right: 20%;
+    margin-right: 10%;
     margin-top: 10%;
 }
 
 .section-main .text-label-sm{
-    margin-top: 20%;
+    position: absolute;
+    bottom: 3rem;
 }
 
 .section-main .text-label-sm .display-6{
@@ -88,7 +89,7 @@ footer {
 /* Section with products */
 
 .products{
-    padding: 4rem 0;
+    padding: 3rem 0;
     background: #e1c6db;
 }
 
@@ -110,7 +111,7 @@ footer {
 
 .contacts{
     background: #b4d7e5;
-    padding: 4rem 0;
+    padding: 3rem 0;
 }
 
 .contacts .row>*{

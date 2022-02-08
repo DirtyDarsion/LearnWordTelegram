@@ -7,7 +7,7 @@ class IndexListView(generic.ListView):
     model = Category
     context_object_name = 'categories'
     queryset = Category.objects.filter(show=True).order_by('priority')
-    template_name = 'mainapp/content.html'
+    template_name = 'mainapp/index.html'
 
     def get_context_data(self, **kwargs):
         context = super(IndexListView, self).get_context_data(**kwargs)
