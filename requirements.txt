@@ -11,6 +11,7 @@ python-dateutil==2.8.2
 python-dotenv==0.19.2
 s3transfer==0.5.0
 six==1.16.0
+sorl-thumbnail==12.7.0
 sqlparse==0.4.2
 tzdata==2021.5
 urllib3==1.26.8
