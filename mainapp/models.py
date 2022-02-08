@@ -1,9 +1,10 @@
 from django.db import models
+from sorl.thumbnail import ImageField
 
 
 class Category(models.Model):
     name = models.CharField('Название', max_length=30)
-    img = models.ImageField('Изображение', upload_to='mainapp/media/categories', default='')
+    img = ImageField('Изображение', upload_to='mainapp/media/categories', default='')
     show = models.BooleanField('На главной', default=True)
     priority = models.IntegerField('Приоритет', default=0)
 
@@ -17,7 +18,7 @@ class Category(models.Model):
 
 class Products(models.Model):
     name = models.CharField('Название', max_length=60)
-    img = models.ImageField('Изображение', upload_to='mainapp/media', default='')
+    img = ImageField('Изображение', upload_to='mainapp/media/products', default='')
     category = models.ForeignKey(Category, on_delete=models.PROTECT, verbose_name='Категория', null=True)
 
     def __str__(self):

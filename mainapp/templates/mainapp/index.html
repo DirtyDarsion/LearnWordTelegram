@@ -1,5 +1,6 @@
 {% extends 'mainapp/main.html' %}
 {% load static %}
+{% load thumbnail %}
 
 {% block title %}Shar House 55{% endblock %}
 
@@ -27,8 +28,10 @@
                 {% for category in categories %}
                     <div class="col-12 col-lg-6 col-xl-4 p-4">
                         <div class="card">
-                            <img src="{{ category.img.url }}"
+                            {% thumbnail category.img "400x400" as im %}
+                            <img src="{{ im.url }}"
                                  class="card-img-top" alt="Fountain with tree">
+                            {% endthumbnail %}
                             <div class="card-body">
                                 <a class="btn btn-outline-primary fs-4" href="{% url 'category_products' category.id %}">
                                     {{ category.name }}

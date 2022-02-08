@@ -1,8 +1,9 @@
 from django.contrib import admin
 from .models import Products, Category, Price, Edges, Cares
+from sorl.thumbnail.admin import AdminImageMixin
 
 
-class ProductsAdmin(admin.ModelAdmin):
+class ProductsAdmin(AdminImageMixin, admin.ModelAdmin):
     fields = ['name', 'category', 'img']
 
     list_display = ('name', 'category')
@@ -10,7 +11,7 @@ class ProductsAdmin(admin.ModelAdmin):
     search_fields = ['name']
 
 
-class CategoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(AdminImageMixin, admin.ModelAdmin):
     fields = ['name', 'show', 'priority', 'img']
 
     list_display = ['name', 'priority', 'show']
