@@ -28,8 +28,6 @@ class ProductsListView(generic.ListView):
             context['title'] = Category.objects.get(id=self.kwargs['pk']).name
         else:
             context['title'] = 'Все работы'
-
-        print(locals())
         return context
 
     def get_queryset(self):
