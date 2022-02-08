@@ -4,18 +4,9 @@
 {% block title %}Shar House 55{% endblock %}
 
 {% block content %}
-    <section class="section-main d-flex align-items-center justify-content-center">
-        {% with main_title='Shar House 55' main_text='Индивидуальный подход к каждому клиенту'%}
-        <div class="d-none d-lg-block text-label-lg">
-            <h1 class="display-4 mb-4">{{ main_title }}</h1>
-            <h1 class="display-6">{{ main_text }}</h1>
-        </div>
-        <div class="d-lg-none d-block text-label-sm">
-            <h1 class="display-5 mb-4">{{ main_title }}</h1>
-            <h1 class="display-6">{{ main_text }}</h1>
-        </div>
-        {% endwith %}
-    </section>
+    {% with main_title='Shar House 55' main_text='Индивидуальный подход к каждому клиенту'%}
+        {% include 'mainapp/models/section_main.html' %}
+    {% endwith %}
 
     <section class="edge d-flex justify-content-end p-xl-5 p-0">
         <div class="block px-md-5 px-3 py-5">

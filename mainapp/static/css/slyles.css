@@ -44,23 +44,15 @@ footer {
 .section-main .text-label-sm{
     position: absolute;
     bottom: 3rem;
+    max-width: 90%;
+}
+
+.section-main .text-label-sm .display-5{
+    font-size: 3rem;
 }
 
 .section-main .text-label-sm .display-6{
-    font-size: 1.5rem;
-}
-
-.section-main .text-label{
-    margin-top: 50%;
-    padding: 1rem;
-}
-
-.section-main .text-label .display-5{
-    font-size: 1.5rem;
-}
-
-.section-main .text-label .display-6{
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 /* Edge */
