@@ -1,9 +1,21 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: local('Helvetica'),
+         url('../fonts/Helvetica-Thin.ttf') format('truetype'),
+         url('../fonts/Helvetica-Thin.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Helvetica-Thin.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
 html {
     position: relative;
     min-height: 100%;
 }
 
 body {
+    font-family: "Helvetica", sans-serif;
+    letter-spacing: 2px;
     margin-top: 5rem;
     margin-bottom: 4rem;
 }
@@ -36,11 +48,8 @@ footer {
 }
 
 .section-main .text-label-lg, .text-label-sm{
-    background: rgba(255, 255, 255, 0.5);
-    color: #80317a;
-    padding: 1.5rem;
-    border-radius: .5rem;
     text-align: center;
+    font-family: "Helvetica", sans-serif;
 }
 
 .section-main .text-label-lg{
@@ -49,6 +58,9 @@ footer {
 }
 
 .section-main .text-label-sm{
+    background: rgb(255, 255, 255, 70%);
+    padding: 1.5rem;
+    border-radius: .5rem;
     position: absolute;
     bottom: 3rem;
     max-width: 90%;
@@ -66,7 +78,7 @@ footer {
 
 .edge{
     position: relative;
-    background-color: #d3d5ea;
+    background-color: #e4d4e7;
     background-image: url("../mainapp/images/logo-image.png");
     background-size: auto 90%;
     background-position: 10%;
@@ -76,7 +88,7 @@ footer {
 .edge .block{
     width: 100%;
     max-width: 60rem;
-    background-color: #aab9d0;
+    background: #c3d0ff;
 }
 
 .edge .icon-image{
@@ -89,11 +101,11 @@ footer {
 
 .products{
     padding: 3rem 0;
-    background: #e1c6db;
+    background: #cdd6ff;
 }
 
 .products .card{
-    background: #d2b2ce;
+    background: #c3d0ff;
     text-align: center;
 }
 
