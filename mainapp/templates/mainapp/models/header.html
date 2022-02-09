@@ -25,6 +25,11 @@
                     <li class="nav-item">
                         <a class="nav-link me-3" href="{% url 'care' %}">Уход</a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link me-3" href="/admin-panel">Админка</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

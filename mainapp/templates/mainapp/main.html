@@ -14,10 +14,15 @@
         </title>
     </head>
     <body class="bg-light">
+        <div class="fixed-button-call">
+            <a href="#contacts" title="Связаться">
+                <img src="{% static 'mainapp/images/icons/fixed-call-icon.png' %}" width="100" height="100" alt="Call">
+            </a>
+        </div>
+
         {% include 'mainapp/models/header.html' %}
 
-        {% block content %}
-        {% endblock %}
+        {% block content %}{% endblock %}
 
         {% include 'mainapp/models/footer.html' %}
 

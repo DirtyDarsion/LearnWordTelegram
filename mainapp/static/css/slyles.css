@@ -8,6 +8,13 @@ body {
     margin-bottom: 4rem;
 }
 
+.fixed-button-call{
+    z-index: 999;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+
 footer {
     position: absolute;
     bottom: 0;
