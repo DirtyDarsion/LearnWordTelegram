@@ -1,5 +1,5 @@
 from django.db import models
-from sorl.thumbnail import ImageField
+from sorl.thumbnail import ImageField, delete
 
 
 class Category(models.Model):
@@ -15,6 +15,10 @@ class Category(models.Model):
         verbose_name = 'Категория'
         verbose_name_plural = 'Категории'
 
+    def delete(self, *args, **kwargs):
+        delete(self.img)
+        super().delete(*args, **kwargs)
+
 
 class Products(models.Model):
     name = models.CharField('Название', max_length=60)
@@ -27,6 +31,10 @@ class Products(models.Model):
     class Meta:
         verbose_name = 'Работа'
         verbose_name_plural = 'Работы'
+
+    def delete(self, *args, **kwargs):
+        delete(self.img)
+        super().delete(*args, **kwargs)
 
 
 class Price(models.Model):
