@@ -2,10 +2,10 @@
 {% load static %}
 {% load thumbnail %}
 
-{% block title %}Shar House 55{% endblock %}
+{% block title %}SharHouse55. Гелиевые шары с бесплатной доставкой в Омске!{% endblock %}
 
 {% block content %}
-    {% with main_title='Shar House 55' main_text='Индивидуальный подход к каждому клиенту'%}
+    {% with main_title='SharHouse55' main_text='Гелиевые шары с бесплатной доставкой в Омске'%}
         {% include 'mainapp/models/section_main.html' %}
     {% endwith %}
 
@@ -30,7 +30,7 @@
                         <div class="card">
                             {% thumbnail category.img "400x400" as im %}
                             <img src="{{ im.url }}"
-                                 class="card-img-top" alt="Fountain with tree">
+                                 class="card-img-top" alt="{{ category.name }}">
                             {% endthumbnail %}
                             <div class="card-body">
                                 <a class="btn btn-outline-primary fs-4" href="{% url 'category_products' category.id %}">
