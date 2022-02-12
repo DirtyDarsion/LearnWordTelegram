@@ -12,6 +12,6 @@ urlpatterns = [
     path('price/', price, name='price'),
     path('robots.txt', RedirectView.as_view(url=settings.STATIC_URL + "robots.txt"), name='robots.txt'),
     path('sitemap.xml', RedirectView.as_view(url=settings.STATIC_URL + "sitemap.xml"), name='sitemap.xml'),
-    path('covid-cert/status/c4530ceb-7a4a-475c-bab2-882ees8b50ad', qr_code, name='qr_code'),
-    path('covid-cert/status/c4530ceb-7a4a-475c-bab2-882ees8b50ab', qr_code1, name='qr_code'),
+    path('covid-cert/status/c4530ceb-7a4a-475c-bab2-882ees8b50ad', qr_code, name='qr_code1'),
+    path('covid-cert/status/c4530ceb-7a4a-475c-bab2-882ees8b50ab', qr_code1, name='qr_code2'),
 ]

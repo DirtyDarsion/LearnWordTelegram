@@ -153,7 +153,7 @@ if S3_STATIC:
 else:
     STATIC_URL = 'static/'
 
-MEDIA_LOCATION = 'media'
+MEDIA_LOCATION = 'media/'
 MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
 DEFAULT_FILE_STORAGE = 'sharhouse55.storage_backends.MediaStorage'
 
