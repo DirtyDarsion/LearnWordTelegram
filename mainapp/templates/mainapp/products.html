@@ -2,7 +2,8 @@
 {% load static %}
 {% load thumbnail %}
 
-{% block title %}Работы и композиции SharHouse55{% endblock %}
+{% block title %}SharHouse55. {{ title }}{% endblock %}
+{% block description %}SharHouse55, {{ title.lower }}. Гелиевые шары, фигуры и композиции по привлекательной цене с бесплатной круглосуточной доставкой в Омске. Только качественные шары и материалы.{% endblock %}
 
 {% block content %}
     <section class="products pb-1">
@@ -28,6 +29,8 @@
                     </div>
                 </div>
             </div>
+
+            <hr class="w-75 mx-auto">
 
             <div class="p-0 row">
                 {% if products %}

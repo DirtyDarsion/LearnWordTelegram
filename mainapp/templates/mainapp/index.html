@@ -3,6 +3,7 @@
 {% load thumbnail %}
 
 {% block title %}SharHouse55. Гелиевые шары с бесплатной доставкой в Омске!{% endblock %}
+{% block description %}Гелиевые шары, фигуры и композиции по привлекательной цене с бесплатной круглосуточной доставкой в Омске. Только качественные шары и материалы.{% endblock %}
 
 {% block content %}
     {% with main_title='SharHouse55' main_text='Гелиевые шары с бесплатной доставкой в Омске'%}
@@ -11,7 +12,8 @@
 
     <section class="edge d-flex justify-content-end p-xl-5 p-0">
         <div class="block px-md-5 px-3 py-5">
-            <h1 class="display-4 mb-4">Почему мы?</h1>
+            <h1 class="display-4 mb-4 text-center">Почему мы?</h1>
+            <hr class="w-75 mx-auto mb-4">
             {% for edge in edges %}
                 <div class="col-12 d-flex align-items-center mb-3">
                     <img class="icon-image" src="{% static 'mainapp/images/icons/ok-icon.png' %}" alt="Yes">

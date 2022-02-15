@@ -43,13 +43,13 @@ class CaresListView(generic.ListView):
     template_name = 'mainapp/care.html'
 
 
-def price(request):
-    return render(request, 'mainapp/price.html')
+class PriceView(generic.TemplateView):
+    template_name = 'mainapp/price.html'
 
 
-def qr_code(request):
-    return render(request, 'mainapp/qr-code.html')
+class QRCode1View(generic.TemplateView):
+    template_name = 'mainapp/qr-code.html'
 
 
-def qr_code1(request):
-    return render(request, 'mainapp/qr-code1.html')
+class QRCode2View(generic.TemplateView):
+    template_name = 'mainapp/qr-code1.html'

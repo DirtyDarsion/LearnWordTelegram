@@ -5,6 +5,7 @@ __pycache__/
 .env
 /venv
 /.idea
+need_change.txt
 
 # Default ignored files
 /shelf/
