@@ -38,11 +38,14 @@
         <link rel="icon" href="{% static 'mainapp/favicon.ico' %}" type="image/x-icon">
     </head>
     <body class="bg-light">
-        <div class="fixed-button-call">
-            <a href="#contacts" title="Связаться">
-                <img src="{% static 'mainapp/images/icons/fixed-call-icon.png' %}" width="100" height="100" alt="Call">
-            </a>
+        <div class="dark-background" hidden></div>
+        <div class="contacts-window" hidden>
+            <button class="close-window closeContacts">Х</button>
+            {% include 'mainapp/models/contacts.html' %}
         </div>
+        <button class="notify-start openContacts" hidden>
+            <div class="close-notify">Свяжитесь с нами</div>
+        </button>
 
         {% include 'mainapp/models/header.html' %}
 

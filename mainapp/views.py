@@ -32,9 +32,9 @@ class ProductsListView(generic.ListView):
 
     def get_queryset(self):
         if 'pk' in self.kwargs:
-            return Products.objects.filter(category=self.kwargs['pk'])
+            return Products.objects.filter(category=self.kwargs['pk']).order_by('-id')
         else:
-            return Products.objects.all()
+            return Products.objects.all().order_by('-id')
 
 
 class CaresListView(generic.ListView):
