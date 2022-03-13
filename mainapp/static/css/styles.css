@@ -110,7 +110,12 @@ p {
 
 /* About-index */
 
-.about-index p{
+.about {
+    padding: 3rem 0;
+    background: #cdd6ff;
+}
+
+.about p{
     font-size: calc(1rem + .6vw);
 }
 

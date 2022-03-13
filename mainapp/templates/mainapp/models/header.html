@@ -24,11 +24,6 @@
                     <li class="nav-item">
                         <a class="nav-link me-3" href="{% url 'care' %}">Рекомендации</a>
                     </li>
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link me-3" href="/admin-panel">Админка</a>
-                    </li>
-                    {% endif %}
                 </ul>
                 <div class="navbar-contacts d-flex justify-content-center">
                     <a href="tel:+79659838316"
