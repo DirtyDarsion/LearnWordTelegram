@@ -1,5 +1,5 @@
 from django.views import generic
-from .models import Products, Category, Edges, Cares
+from .models import Products, Category, Cares
 
 
 class IndexListView(generic.ListView):
@@ -10,7 +10,14 @@ class IndexListView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super(IndexListView, self).get_context_data(**kwargs)
-        context['edges'] = Edges.objects.all()
+        edges = [
+            'Бесплатная доставка при заказе от 1500 рублей',
+            'Профессиональная обработка шаров',
+            'Выполняем срочные заказы',
+            'Индивидуальные надписи',
+            'Доставка 24/7',
+        ]
+        context['edges'] = edges
         return context
 
 

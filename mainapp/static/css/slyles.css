@@ -34,6 +34,11 @@ button {
     border: none;
 }
 
+p {
+    text-indent: 3rem;
+    text-align: justify;
+}
+
 .notify-start {
     z-index: 999;
     position: fixed;
@@ -103,6 +108,12 @@ button {
     font-size: 1.5rem;
 }
 
+/* About-index */
+
+.about-index p{
+    font-size: calc(1rem + .6vw);
+}
+
 /* Edge */
 
 .edge{
@@ -127,15 +138,9 @@ button {
 
 .edges{
     transition: all .4s ease-in-out;
-    transform: translate3d(30px, 0px, 0);
+    transform: translate3d(2vw, 0, 0);
     opacity: 0;
-    font-size: 2rem;
-}
-
-@media (max-width: 680px) {
-    .edges{
-        font-size: 4vw;
-    }
+    font-size: calc(1rem + .6vw);
 }
 
 .edges-animation{
@@ -263,8 +268,6 @@ button {
 .care p{
     font-size: 22px;
     font-weight: 300;
-    text-align: justify;
-    text-indent: 3rem;
 }
 
 /* Pagination */

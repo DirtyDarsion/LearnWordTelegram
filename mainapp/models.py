@@ -50,17 +50,6 @@ class Price(models.Model):
         verbose_name_plural = 'Цены'
 
 
-class Edges(models.Model):
-    text = models.TextField('Текст')
-
-    def __str__(self):
-        return self.text
-
-    class Meta:
-        verbose_name = 'Плюс'
-        verbose_name_plural = 'Плюсы'
-
-
 class Cares(models.Model):
     name = models.CharField('Название', max_length=30)
     text = models.TextField('Текст')

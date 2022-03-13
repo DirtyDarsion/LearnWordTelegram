@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Products, Category, Price, Edges, Cares
+from .models import Products, Category, Price, Cares
 from sorl.thumbnail.admin import AdminImageMixin
 
 
@@ -28,5 +28,4 @@ class PriceAdmin(admin.ModelAdmin):
 admin.site.register(Products, ProductsAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Price, PriceAdmin)
-admin.site.register(Edges)
 admin.site.register(Cares)
