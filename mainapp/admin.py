@@ -12,7 +12,7 @@ class ProductsAdmin(AdminImageMixin, admin.ModelAdmin):
 
 
 class CategoryAdmin(AdminImageMixin, admin.ModelAdmin):
-    fields = ['name', 'slug', 'show', 'priority', 'img']
+    fields = ['name', 'slug', 'description', 'show', 'priority', 'img']
 
     list_display = ['name', 'slug', 'priority', 'show']
     ordering = ['-show', 'priority']
