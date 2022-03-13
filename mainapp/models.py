@@ -4,6 +4,7 @@ from sorl.thumbnail import ImageField, delete
 
 class Category(models.Model):
     name = models.CharField('Название', max_length=30)
+    slug = models.CharField('Ссылка', max_length=30)
     img = ImageField('Изображение', upload_to='mainapp/media/categories', default='')
     show = models.BooleanField('На главной', default=True)
     priority = models.IntegerField('Приоритет', default=0)

@@ -24,9 +24,9 @@
                             Категории
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="{% url 'products' %}">Все работы</a></li>
+                            <li><a class="dropdown-item" href="{% url 'products' %}">Весь каталог</a></li>
                             {% for category in categories %}
-                            <li><a class="dropdown-item" href="{% url 'category_products' category.id %}">{{ category.name }}</a></li>
+                            <li><a class="dropdown-item" href="{% url 'category_products' category.slug %}">{{ category.name }}</a></li>
                             {% endfor %}
                         </ul>
                     </div>

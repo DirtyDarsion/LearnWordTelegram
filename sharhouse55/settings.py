@@ -71,7 +71,7 @@ WSGI_APPLICATION = 'sharhouse55.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-USE_REMOTE_DB = 1
+USE_REMOTE_DB = True
 
 if USE_REMOTE_DB:
     DATABASES = {

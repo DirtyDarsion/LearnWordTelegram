@@ -28,7 +28,7 @@
 
     <section class="products">
         <div class="container">
-            <h1 class="d-flex justify-content-center display-4">Работы</h1>
+            <h1 class="d-flex justify-content-center display-4">Каталог</h1>
             <div class="row">
                 {% for category in categories %}
                     <div class="col-12 col-lg-6 col-xl-4 p-4">
@@ -38,7 +38,7 @@
                                  class="card-img-top" alt="{{ category.name }}">
                             {% endthumbnail %}
                             <div class="card-body">
-                                <a class="btn btn-outline-primary fs-4" href="{% url 'category_products' category.id %}">
+                                <a class="btn btn-outline-primary fs-4" href="{% url 'category_products' category.slug %}">
                                     {{ category.name }}
                                 </a>
                             </div>

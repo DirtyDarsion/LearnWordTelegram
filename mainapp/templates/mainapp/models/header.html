@@ -1,4 +1,6 @@
-<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top fs-5" style="height: 5rem;">
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top fs-5" style="height: 5rem;">
     <div class="container">
         <a class="navbar-brand me-4 fs-4" href="{% url 'index' %}">
             Shar House 55
@@ -28,6 +30,29 @@
                     </li>
                     {% endif %}
                 </ul>
+                <div class="navbar-contacts d-flex justify-content-center">
+                    <a href="tel:+79659838316"
+                       class="block d-flex align-items-center">
+                        <img class="icon-image d-inline"
+                             src="{% static 'mainapp/images/icons/call-icon.png' %}" alt="Call">
+                    </a>
+                    <a href="https://www.instagram.com/shar_house55/"
+                       class="block d-flex align-items-center"
+                       target="_blank">
+                        <img class="icon-image d-inline"
+                             src="{% static 'mainapp/images/icons/instagram-icon.png' %}" alt="Instagram">
+                    </a>
+                    <a href="https://wa.me/79659838316"
+                       class="block d-flex align-items-center">
+                        <img class="icon-image d-inline"
+                             src="{% static 'mainapp/images/icons/whatsapp-icon.png' %}" alt="WhatsApp">
+                    </a>
+                    <a href="https://t.me/sharhouse55"
+                       class="block d-flex align-items-center">
+                        <img class="icon-image d-inline "
+                             src="{% static 'mainapp/images/icons/telegram-icon.png' %}" alt="Telegram">
+                    </a>
+                </div>
             </div>
         </div>
     </div>

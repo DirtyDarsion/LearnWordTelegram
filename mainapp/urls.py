@@ -1,14 +1,13 @@
 from django.urls import path
 from django.conf import settings
 from django.views.generic import RedirectView
-from django.shortcuts import render
 from .views import IndexListView, ProductsListView, CaresListView, PriceView, QRCode1View, QRCode2View
 
 
 urlpatterns = [
     path('', IndexListView.as_view(), name='index'),
     path('products/', ProductsListView.as_view(), name='products'),
-    path('products/<int:pk>/', ProductsListView.as_view(), name='category_products'),
+    path('products/<slug:slug>/', ProductsListView.as_view(), name='category_products'),
     path('care/', CaresListView.as_view(), name='care'),
     path('price/', PriceView.as_view(), name='price'),
     path('robots.txt', RedirectView.as_view(url=settings.STATIC_URL + "robots.txt"), name='robots.txt'),

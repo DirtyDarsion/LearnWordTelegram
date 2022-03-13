@@ -46,6 +46,14 @@ button {
     font-size: 18px;
 }
 
+/* Header */
+
+.navbar-contacts .icon-image{
+    width: 1.9rem;
+    height: 1.9rem;
+    margin-right: .8rem;
+}
+
 /* First section */
 
 .section-main{

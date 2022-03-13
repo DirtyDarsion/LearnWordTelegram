@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.views import generic
 from .models import Products, Category, Edges, Cares
 
@@ -24,15 +23,16 @@ class ProductsListView(generic.ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(ProductsListView, self).get_context_data(**kwargs)
         context['categories'] = Category.objects.all()
-        if 'pk' in self.kwargs:
-            context['title'] = Category.objects.get(id=self.kwargs['pk']).name
+        if 'slug' in self.kwargs:
+            context['title'] = Category.objects.get(slug=self.kwargs['slug']).name
         else:
-            context['title'] = 'Все работы'
+            context['title'] = 'Весь каталог'
         return context
 
     def get_queryset(self):
-        if 'pk' in self.kwargs:
-            return Products.objects.filter(category=self.kwargs['pk']).order_by('-id')
+        if 'slug' in self.kwargs:
+            category_id = Category.objects.get(slug=self.kwargs['slug']).id
+            return Products.objects.filter(category=category_id).order_by('-id')
         else:
             return Products.objects.all().order_by('-id')
 
