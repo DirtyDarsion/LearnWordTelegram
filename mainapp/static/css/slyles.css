@@ -48,6 +48,16 @@ button {
 
 /* Header */
 
+.navbar-contacts a{
+    transform: translate3d(0, 0, 0) !important;
+    transition: all .1s ease-in-out;
+}
+
+.navbar-contacts a:hover{
+    transform: translate3d(0, -5px, 0) !important;
+    transition: all .1s ease-in-out;
+}
+
 .navbar-contacts .icon-image{
     width: 1.9rem;
     height: 1.9rem;
