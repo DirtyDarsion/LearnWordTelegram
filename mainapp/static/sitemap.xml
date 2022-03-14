@@ -7,7 +7,7 @@
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://www.sharhouse55.shop/products/</loc>
+	<loc>http://www.sharhouse55.shop/products/?page=1</loc>
 	<lastmod>2022-03-14T14:47:29+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
@@ -19,11 +19,6 @@
 <url>
 	<loc>http://www.sharhouse55.shop/about/</loc>
 	<lastmod>2022-03-14T14:47:29+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://www.sharhouse55.shop/products/?page=1</loc>
-	<lastmod>2022-03-14T14:47:30+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>

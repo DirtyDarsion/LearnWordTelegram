@@ -2,9 +2,18 @@
 {% load static %}
 {% load thumbnail %}
 
-{% block title %}SharHouse55. {{ title }}{% endblock %}
+{% block title %}SharHouse55. {% if current_category %}{{ current_category.name }}{% else %}Каталог{% endif %}{% endblock %}
 {% block description %}
-    Магазин SharHouse55, {{ title.lower }}. Cутраница {{ page_obj.number }}. Гелиевые шары в Омске дешево с доставкой. Большой ассортимент товаров: гендер шары, коробки с шарами, фольгированные шары, шары на день рождения, а также различные композиции на ваш вкус. Только качественные шары и материалы.
+    Магазин SharHouse55, {% if current_category %}{{ current_category.name }}{% else %}каталог{% endif %}. Cтраница {{ page_obj.number }}. Гелиевые шары в Омске дешево с доставкой.
+{% endblock %}
+
+{% block metatags %}
+    {% if page_obj.has_previous %}
+        <link rel="prev" href="?page={{ page_obj.previous_page_number }}">
+    {% endif %}
+    {% if page_obj.has_next %}
+        <link rel="next" href="?page={{ page_obj.next_page_number }}">
+    {% endif %}
 {% endblock %}
 
 {% block content %}
@@ -33,7 +42,7 @@
                             Категория
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="{% url 'products' %}">Весь каталог</a></li>
+                            <li><a class="dropdown-item" href="{% url 'products' %}?page=1">Весь каталог</a></li>
                             {% for category in categories %}
                             <li><a class="dropdown-item" href="{% url 'category_products' category.slug %}?page=1">{{ category.name }}</a></li>
                             {% endfor %}
