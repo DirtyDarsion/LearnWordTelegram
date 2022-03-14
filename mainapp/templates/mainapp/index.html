@@ -58,7 +58,7 @@
                                  class="card-img-top" alt="{{ category.name }}">
                             {% endthumbnail %}
                             <div class="card-body">
-                                <a class="btn btn-outline-primary fs-4" href="{% url 'category_products' category.slug %}">
+                                <a class="btn btn-outline-primary fs-4" href="{% url 'category_products' category.slug %}?page=1">
                                     {{ category.name }}
                                 </a>
                             </div>
