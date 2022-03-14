@@ -9,18 +9,28 @@
 
 {% block content %}
     <section class="products pb-1">
-        <div class="container-fluid">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'index' %}">Главная</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Каталог</li>
+                </ol>
+            </nav>
             <div class="row">
-                <div class="col-12 col-sm-4 d-flex justify-content-center align-items-center mb-3">
-                    <a class="display-4 text-primary fs-4 text-decoration-none" href="{% url "index" %}">На главную</a>
+                <div class="col-12 col-md-4"></div>
+                <div class="col-12 col-md-4 d-flex justify-content-center align-items-center mb-3 text-center">
+                    <h1 class="display-6" style="margin-bottom: 0">
+                        {% if current_category %}
+                        {{ current_category.name }}
+                        {% else %}
+                        Каталог
+                        {% endif %}
+                    </h1>
                 </div>
-                <div class="col-12 col-sm-4 d-flex justify-content-center align-items-center mb-3">
-                    <h1 class="display-6">{{ title }}</h1>
-                </div>
-                <div class="col-12 col-sm-4 d-flex justify-content-center align-items-center mb-3">
+                <div class="col-12 col-md-4 d-flex justify-content-center align-items-center mb-3">
                     <div class="dropdown" style="width: 12rem">
                         <button class="btn btn-primary dropdown-toggle fs-4" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            Категории
+                            Категория
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="{% url 'products' %}">Весь каталог</a></li>
@@ -32,12 +42,18 @@
                 </div>
             </div>
 
-            <hr class="w-75 mx-auto">
+            <hr class="mx-auto" style="width: 90%">
+
+            {% if current_category.description %}
+                <div class="category-description">
+                    {{ current_category.description }}
+                </div>
+            {% endif %}
 
             <div class="p-0 row">
                 {% if products %}
                 {% for product in products %}
-                    <div class="col-12 col-md-6 col-xl-4 col-xxl-3 p-4">
+                    <div class="col-12 col-md-6 col-xl-4 p-4">
                         <div class="card">
                             {% thumbnail product.img "400x400" as im %}
                             <img src="{{ im.url }}"
@@ -52,7 +68,7 @@
                     </div>
                 {% endfor %}
                 {% else %}
-                    <div class="d-flex justify-content-center display-6 fs-4 pt-4 my-2">
+                    <div class="d-flex justify-content-center pt-4 mb-4">
                         В данной категории ничего нет
                     </div>
                 {% endif %}

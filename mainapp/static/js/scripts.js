@@ -39,15 +39,14 @@ function show_notify() {
 }
 
 
-for (let i of document.querySelectorAll('.openContacts')) {
-    i.onclick = function() {
-        document.querySelector('.contacts-window').hidden=false;
-        document.querySelector('.dark-background').hidden=false;
-    };
-}
-
 document.querySelector('.close-notify').onclick = function () {
     document.querySelector('.notify-start').hidden=true;
+};
+
+
+document.querySelector('.openContacts').onclick = function () {
+        document.querySelector('.contacts-window').hidden=false;
+        document.querySelector('.dark-background').hidden=false;
 };
 
 document.querySelector('.closeContacts').onclick = function() {

@@ -6,6 +6,7 @@ __pycache__/
 /venv
 /.idea
 semantic_core.txt
+need_change.txt
 
 # Default ignored files
 /shelf/

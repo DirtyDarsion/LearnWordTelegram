@@ -11,10 +11,11 @@ class IndexListView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(IndexListView, self).get_context_data(**kwargs)
         edges = [
-            'Бесплатная доставка при заказе от 1500 рублей',
-            'Профессиональная обработка шаров',
+            'Бесплатно доставляем при заказе от 1500 рублей',
+            'Создаем предварительный проект композиции',
+            'Профессионально обрабатываем шары',
+            'Делаем индивидуальные надписи и рисунки',
             'Выполняем срочные заказы',
-            'Индивидуальные надписи',
             'Доставка 24/7',
         ]
         context['edges'] = edges
@@ -29,11 +30,11 @@ class ProductsListView(generic.ListView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(ProductsListView, self).get_context_data(**kwargs)
-        context['categories'] = Category.objects.all()
+        context['categories'] = Category.objects.all().order_by('name')
         if 'slug' in self.kwargs:
-            context['title'] = Category.objects.get(slug=self.kwargs['slug']).name
+            context['current_category'] = Category.objects.get(slug=self.kwargs['slug'])
         else:
-            context['title'] = 'Весь каталог'
+            context['current_category'] = None
         return context
 
     def get_queryset(self):
@@ -48,6 +49,10 @@ class CaresListView(generic.ListView):
     model = Cares
     context_object_name = 'cares'
     template_name = 'mainapp/care.html'
+
+
+class AboutView(generic.TemplateView):
+    template_name = 'mainapp/about.html'
 
 
 class PriceView(generic.TemplateView):

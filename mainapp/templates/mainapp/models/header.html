@@ -16,34 +16,33 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <button class="nav-link me-3 openContacts">Контакты</button>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link me-3" href="{% url 'products' %}">Каталог</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link me-3" href="{% url 'care' %}">Рекомендации</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-3" href="{% url 'about' %}">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-3" href="{% url 'about' %}#how_to_order">Заказать</a>
+                    </li>
                 </ul>
                 <div class="navbar-contacts d-flex justify-content-center">
-                    <a href="tel:+79659838316"
-                       class="block d-flex align-items-center">
+                    <a href="tel:+79659838316" class="block d-flex align-items-center">
                         <img class="icon-image d-inline"
                              src="{% static 'mainapp/images/icons/call-icon.png' %}" alt="Call">
                     </a>
-                    <a href="https://www.instagram.com/shar_house55/"
-                       class="block d-flex align-items-center"
+                    <a href="https://www.instagram.com/shar_house55/" class="block d-flex align-items-center"
                        target="_blank">
                         <img class="icon-image d-inline"
                              src="{% static 'mainapp/images/icons/instagram-icon.png' %}" alt="Instagram">
                     </a>
-                    <a href="https://wa.me/79659838316"
-                       class="block d-flex align-items-center">
+                    <a href="https://wa.me/79659838316" class="block d-flex align-items-center">
                         <img class="icon-image d-inline"
                              src="{% static 'mainapp/images/icons/whatsapp-icon.png' %}" alt="WhatsApp">
                     </a>
-                    <a href="https://t.me/sharhouse55"
-                       class="block d-flex align-items-center">
+                    <a href="https://t.me/sharhouse55" class="block d-flex align-items-center">
                         <img class="icon-image d-inline "
                              src="{% static 'mainapp/images/icons/telegram-icon.png' %}" alt="Telegram">
                     </a>

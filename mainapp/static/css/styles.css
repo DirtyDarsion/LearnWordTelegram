@@ -19,6 +19,7 @@ body {
     margin-top: 5rem;
     margin-bottom: 4rem;
     width: 100%;
+    font-size: calc(1.2rem + .3vw);
 }
 
 footer {
@@ -37,6 +38,10 @@ button {
 p {
     text-indent: 3rem;
     text-align: justify;
+}
+
+.row>*{
+    padding: 0;
 }
 
 .notify-start {
@@ -108,15 +113,11 @@ p {
     font-size: 1.5rem;
 }
 
-/* About-index */
+/* About */
 
 .about {
     padding: 3rem 0;
     background: #cdd6ff;
-}
-
-.about p{
-    font-size: calc(1rem + .6vw);
 }
 
 /* Edge */
@@ -132,7 +133,8 @@ p {
 .edge .block{
     width: 100%;
     max-width: 60rem;
-    background: #c3d0ff;
+    /* background: #c3d0ff; */
+    background: #b0bff8;
 }
 
 .edge .icon-image{
@@ -173,13 +175,17 @@ p {
     opacity: 1 !important;
 }
 
-.products .prod{
-    height: 8rem;
-}
-
 .products .btn{
     width: 100%;
     line-height: 3rem;
+}
+
+.products .category-description {
+    padding: 1rem;
+    background: rgb(0, 0, 0, 10%);
+    border-radius: 1rem;
+    text-align: justify;
+    text-indent: 3rem;
 }
 
 /* Contacts section */
@@ -213,17 +219,9 @@ p {
     width: 100%;
 }
 
-.testtest{
-    display: none;
-}
-
 .contacts{
     background: #b4d7e5;
     padding: 3rem 0;
-}
-
-.contacts .row>*{
-    padding: 0;
 }
 
 .contacts .block{
@@ -258,26 +256,19 @@ p {
 }
 
 .care h1{
-    font-size: 48px;
-    font-weight: 300;
-    text-indent: 3rem;
+    font-size: 2rem;
 }
 
 .care h2{
     padding: .5rem 0 .5rem 0;
-    font-size: 26px;
-    font-weight: 360;
+    font-size: 1.5rem;
+    font-weight: 600;
     text-indent: 3rem;
-}
-
-.care p{
-    font-size: 22px;
-    font-weight: 300;
 }
 
 /* Pagination */
 
 .page-link{
-    font-size: 24px;
+    font-size: 1.5rem;
     padding: .5rem 1rem;
 }
