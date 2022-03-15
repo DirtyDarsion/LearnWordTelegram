@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.views import generic
 from .models import Products, Category, Cares
 
@@ -57,6 +58,14 @@ class AboutView(generic.TemplateView):
 
 class PriceView(generic.TemplateView):
     template_name = 'mainapp/price.html'
+
+
+def sitemap(request):
+    return render(request, 'mainapp/sitemap.xml', content_type='text/xml')
+
+
+def robots(request):
+    return render(request, 'mainapp/robots.txt', content_type='text')
 
 
 class QRCode1View(generic.TemplateView):

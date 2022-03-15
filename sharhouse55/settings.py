@@ -27,14 +27,14 @@ ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', '192.168.0.6', '192.168.0.
 
 INSTALLED_APPS = [
     'mainapp',
+    'storages',
+    'sorl.thumbnail',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'storages',
-    'sorl.thumbnail',
 ]
 
 MIDDLEWARE = [
