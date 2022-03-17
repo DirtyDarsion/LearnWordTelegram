@@ -11,6 +11,4 @@ urlpatterns = [
     path('about/', views.AboutView.as_view(), name='about'),
     path('robots.txt', views.robots, name='robots.txt'),
     path('sitemap.xml', views.sitemap, name='sitemap.xml'),
-    path('covid-cert/status/c4530ceb-7a4a-475c-bab2-882ees8b50ad', views.QRCode1View.as_view(), name='qr_code1'),
-    path('covid-cert/status/c4530ceb-7a4a-475c-bab2-882ees8b50ab', views.QRCode2View.as_view(), name='qr_code2'),
 ]

@@ -66,11 +66,3 @@ def sitemap(request):
 
 def robots(request):
     return render(request, 'mainapp/robots.txt', content_type='text')
-
-
-class QRCode1View(generic.TemplateView):
-    template_name = 'mainapp/qr-code.html'
-
-
-class QRCode2View(generic.TemplateView):
-    template_name = 'mainapp/qr-code1.html'

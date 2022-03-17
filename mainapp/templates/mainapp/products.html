@@ -2,7 +2,7 @@
 {% load static %}
 {% load thumbnail %}
 
-{% block title %}SharHouse55. {% if current_category %}{{ current_category.name }}{% else %}Каталог{% endif %}{% endblock %}
+{% block title %}SharHouse55. {% if current_category %}{{ current_category.name }}{% else %}Каталог{% endif %}. Страница {{ page_obj.number }}{% endblock %}
 {% block description %}
     Магазин SharHouse55, {% if current_category %}{{ current_category.name }}{% else %}каталог{% endif %}. Cтраница {{ page_obj.number }}. Гелиевые шары в Омске дешево с доставкой.
 {% endblock %}
