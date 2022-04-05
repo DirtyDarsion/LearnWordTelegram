@@ -12,12 +12,12 @@ class IndexListView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(IndexListView, self).get_context_data(**kwargs)
         edges = [
-            'Бесплатно доставляем при заказе от 1500 рублей',
-            'Создаем предварительный проект композиции',
-            'Профессионально обрабатываем шары',
-            'Делаем индивидуальные надписи и рисунки',
-            'Выполняем срочные заказы',
-            'Доставка 24/7',
+            'Бесплатно доставим при заказе от 1500 рублей',
+            'Создадим предварительный проект композиции',
+            'Профессионально обработаем шары',
+            'Сделаем индивидуальные надписи и рисунки',
+            'Выполним срочные заказы',
+            'Доставим 24/7',
         ]
         context['edges'] = edges
         return context
@@ -29,7 +29,7 @@ class ProductsListView(generic.ListView):
     context_object_name = 'products'
     template_name = 'mainapp/products.html'
 
-    def get_context_data(self, *, object_list=None, **kwargs):
+    def get_context_data(self, *args, **kwargs):
         context = super(ProductsListView, self).get_context_data(**kwargs)
         context['categories'] = Category.objects.all().order_by('name')
         if 'slug' in self.kwargs:

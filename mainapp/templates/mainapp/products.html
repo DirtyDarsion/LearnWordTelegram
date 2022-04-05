@@ -2,18 +2,19 @@
 {% load static %}
 {% load thumbnail %}
 
-{% block title %}SharHouse55. {% if current_category %}{{ current_category.name }}{% else %}Каталог{% endif %}. Страница {{ page_obj.number }}{% endblock %}
-{% block description %}
-    Магазин SharHouse55, {% if current_category %}{{ current_category.name }}{% else %}каталог{% endif %}. Cтраница {{ page_obj.number }}. Гелиевые шары в Омске дешево с доставкой.
-{% endblock %}
-
 {% block metatags %}
+    <link rel="canonical" href="?page={{ page_obj.number }}">
     {% if page_obj.has_previous %}
         <link rel="prev" href="?page={{ page_obj.previous_page_number }}">
     {% endif %}
     {% if page_obj.has_next %}
         <link rel="next" href="?page={{ page_obj.next_page_number }}">
     {% endif %}
+{% endblock %}
+
+{% block title %}SharHouse55. {% if current_category %}{{ current_category.name }}{% else %}Каталог{% endif %}. Страница {{ page_obj.number }}. Доставка гелиевых шаров в Омске{% endblock %}
+{% block description %}
+    Магазин SharHouse55, {% if current_category %}{{ current_category.name }}{% else %}каталог{% endif %}. Cтраница {{ page_obj.number }}. Гелиевые шары в Омске недорого с бесплатной доставкой от 1500 рублей.
 {% endblock %}
 
 {% block content %}
