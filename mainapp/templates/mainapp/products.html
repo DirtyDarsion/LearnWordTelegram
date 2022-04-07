@@ -67,7 +67,10 @@
                         <div class="card">
                             {% thumbnail product.img "400x400" as im %}
                             <img src="{{ im.url }}"
-                                 class="card-img-top" alt="{{ product.name }}">
+                                 class="card-img-top"
+                                 alt="{{ product.name }}"
+                                 title="{{ product.name }}"
+                            >
                             {% endthumbnail %}
                             <div class="card-body prod d-flex align-items-center justify-content-center">
                                 <div class="card-title fs-3 fw-light">

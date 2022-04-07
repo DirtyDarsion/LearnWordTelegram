@@ -55,7 +55,10 @@
                         <div class="card">
                             {% thumbnail category.img "400x400" as im %}
                             <img src="{{ im.url }}"
-                                 class="card-img-top" alt="{{ category.name }}">
+                                 class="card-img-top"
+                                 alt="{{ category.name }}"
+                                 title="{{ category.name }}"
+                            >
                             {% endthumbnail %}
                             <div class="card-body">
                                 <a class="btn btn-outline-primary fs-4" href="{% url 'category_products' category.slug %}?page=1">
