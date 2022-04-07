@@ -120,6 +120,10 @@ p {
     background: #cdd6ff;
 }
 
+.about .img-title{
+    width: 3rem;
+}
+
 /* Edge */
 
 .edge{
