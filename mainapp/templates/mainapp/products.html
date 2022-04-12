@@ -12,9 +12,11 @@
     {% endif %}
 {% endblock %}
 
-{% block title %}SharHouse55. {% if current_category %}{{ current_category.name }}{% else %}Каталог{% endif %}. Страница {{ page_obj.number }}. Доставка гелиевых шаров в Омске{% endblock %}
+{% block title %}
+    {% if current_category %}{{ current_category.name }}{% else %}Каталог{% endif %}. Гелиевые шары в Омске. Страница {{ page_obj.number }}.
+{% endblock %}
 {% block description %}
-    Магазин SharHouse55, {% if current_category %}{{ current_category.name }}{% else %}каталог{% endif %}. Cтраница {{ page_obj.number }}. Гелиевые шары в Омске недорого с бесплатной доставкой от 1500 рублей.
+    Магазин SharHouse55, {% if current_category %}{{ current_category.name }}{% else %}каталог{% endif %}. Гелиевые шары в Омске с бесплатной доставкой. Cтраница {{ page_obj.number }}.
 {% endblock %}
 
 {% block content %}
@@ -29,13 +31,13 @@
             <div class="row">
                 <div class="col-12 col-md-4"></div>
                 <div class="col-12 col-md-4 d-flex justify-content-center align-items-center mb-3 text-center">
-                    <h2 class="display-6" style="margin-bottom: 0">
+                    <h1 class="display-6" style="margin-bottom: 0">
                         {% if current_category %}
                         {{ current_category.name }}
                         {% else %}
                         Каталог
                         {% endif %}
-                    </h2>
+                    </h1>
                 </div>
                 <div class="col-12 col-md-4 d-flex justify-content-center align-items-center mb-3">
                     <div class="dropdown" style="width: 12rem">
